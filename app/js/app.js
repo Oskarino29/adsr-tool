@@ -4,12 +4,13 @@ import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import { createStore } from 'redux';
 
-import SSCC from './redux/reducers';
+import '../scss/app.scss';
+import REDUCERS from './redux/reducers';
 import App from './views/App';
 import Home from './views/Home';
 import About from './views/About';
 
-let store = createStore(SSCC);
+let store = createStore(REDUCERS);
 
 const Root = () => (
   <Provider store={store}>
